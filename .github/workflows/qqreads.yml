@@ -21,8 +21,8 @@ jobs:
         
     steps:
       - name: Checkout
-        #run: |
-         # git clone https://github.com/ziye12/JavaScript.git ~/JavaScript
+        run: |
+          git clone https://github.com/Chen95a/qqreader.git ~/qqreader
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -30,12 +30,12 @@ jobs:
       - name: npm install
         if: env.QQREAD_TIMEHD
         run: |
-          cd ~/JavaScript
+          cd ~/qqreader
           npm install
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_TIMEHD
         run: |
-          cd ~/JavaScript
+          cd ~/qqreader
           node Task/qqreads.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
