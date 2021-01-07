@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/zing618/QQ.git ~/qq
+          git clone https://github.com/zing618/qq.git ~/qq
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
